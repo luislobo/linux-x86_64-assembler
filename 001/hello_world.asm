@@ -14,6 +14,8 @@ section .text
 _start:
 
     ; This is a call to sys_write (rax=1)
+    
+    ; https://man7.org/linux/man-pages/man2/write.2.html
 
     ; size_t sys_write(unsigned int fd, const char * buf, size_t count);
 
