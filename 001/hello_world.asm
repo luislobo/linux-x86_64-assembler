@@ -1,9 +1,16 @@
+; Section .data is for constants
+
 section .data
     msg db  "hello, world!"
 
+; Section .text is for code
+
 section .text
+
+; We must tell it where to start execution
     global _start
 
+; Label referenced by global
 _start:
 
     ; This is a call to sys_write (rax=1)
