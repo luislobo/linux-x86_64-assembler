@@ -1,7 +1,12 @@
-; Section .data is for constants
+; Based on https://0xax.github.io/asm_1/
+
+; Section .data is for initialized data or constants
 
 section .data
     msg db  "hello, world!"
+
+; Section non initialized variables
+; section .bss
 
 ; Section .text is for code
 
@@ -14,8 +19,9 @@ section .text
 _start:
 
     ; This is a call to sys_write (rax=1)
-    
-    ; https://man7.org/linux/man-pages/man2/write.2.html
+
+    ; sys_write man page: https://man7.org/linux/man-pages/man2/write.2.html
+    ; syscall table: https://github.com/torvalds/linux/blob/master/arch/x86/entry/syscalls/syscall_64.tbl
 
     ; size_t sys_write(unsigned int fd, const char * buf, size_t count);
 
